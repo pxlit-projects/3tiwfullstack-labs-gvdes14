@@ -6,9 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api/employee")
@@ -29,6 +27,24 @@ public class EmployeeController {
         return new ResponseEntity(employeeService.getAllEmployees(), HttpStatus.OK);
     }
 
-    // TODO : Toevoegen van de endpoints, zie in de PPT
+    @PostMapping
+    public ResponseEntity add(){
+        return new ResponseEntity(HttpStatus.CREATED); // Todo Post schrijven
+    }
+
+    @GetMapping("/{id}")
+    public ResponseEntity findById (@PathVariable Long id){
+        return null ; // todo : schrijven
+    }
+
+    @GetMapping("/department/{departmentId}")
+    public ResponseEntity findByDepartmentId(@PathVariable Long departmentId){
+        return null ;
+    }
+
+    @GetMapping("/organization/{organizationId}")
+    public ResponseEntity findByOrganizationId(@PathVariable Long organizationId){
+        return null ;
+    }
 
 }
