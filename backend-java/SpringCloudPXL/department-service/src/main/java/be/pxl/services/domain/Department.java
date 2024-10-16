@@ -9,19 +9,20 @@ import lombok.NoArgsConstructor;
 import java.util.List;
 
 @Entity
-@Table(name="organisation")
+@Table(name="department")
 @Data
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class Organization {
+public class Department {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-    private String name;
-    private String address;
-    // TODO : check the lists in a micriservice
-    //private List<Employee> employees ;
-    //private List<Department> departments;
+    private Long organizationId;
+    private String name ;
+    // Todo Check the list
+    //private List<Employee> employees;
+    private String position;
+
 }

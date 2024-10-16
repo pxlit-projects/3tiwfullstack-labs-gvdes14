@@ -1,26 +1,48 @@
 package be.pxl.services.services;
 
 import be.pxl.services.domain.Employee;
-import be.pxl.services.repository.DepartmentRepository;
 import be.pxl.services.repository.EmployeeRepository;
-import be.pxl.services.repository.OrganizationRepository;
-import jdk.jshell.spi.ExecutionControl;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 @RequiredArgsConstructor
 public class EmployeeService implements IEmployeeService{
 
     private final EmployeeRepository employeeRepository ;
-    private final DepartmentRepository departmentRepository ;
-    private final OrganizationRepository organizationRepository ;
 
     @Override
     public List<Employee> getAllEmployees() {
-//        return employeeRepository.findAll();
-        return null ;
+        return employeeRepository.findAll();
+//        return null ;
+    }
+
+    @Override
+    public void add(Employee employee) {
+        employeeRepository.save(employee);
+    }
+
+
+    @Override
+    public Optional<Employee> findById(Long id) {
+        return employeeRepository.findById(id);
+    }
+
+    @Override
+    public List<Employee> findAll() {
+        return employeeRepository.findAll() ;
+    }
+
+    @Override
+    public Optional<Employee>findByOrganization(Long organizationId) {
+        return employeeRepository.findByOrganizationId(organizationId) ;
+    }
+
+    @Override
+    public Optional<Employee>findByDepartment(Long departmentId) {
+        return employeeRepository.findByDepartmentId(departmentId) ;
     }
 }
