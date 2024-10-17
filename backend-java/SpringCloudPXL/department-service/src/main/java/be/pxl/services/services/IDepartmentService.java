@@ -1,8 +1,11 @@
 package be.pxl.services.services;
 
 import be.pxl.services.domain.Department;
+import be.pxl.services.domain.dto.DepartmentRequest;
+import be.pxl.services.domain.dto.DepartmentResponse;
 
 import java.util.List;
+import java.util.Optional;
 
 public interface IDepartmentService {
 
@@ -10,9 +13,11 @@ public interface IDepartmentService {
 
     Department findById(Long id);
 
-    List<Department> findAll();
+    List<DepartmentResponse> findAll();
 
-    List<Department> findByOrganization(String organizationId);
+    Optional<Department> findByOrganizationId(Long organizationId);
 
-    List<Department> findByOrganizationWithEmployees(Long organizationId);
+    Optional<Department> findByOrganizationIdWithEmployees(Long organizationId);
+
+    void addDepartment(DepartmentRequest departmentRequest);
 }

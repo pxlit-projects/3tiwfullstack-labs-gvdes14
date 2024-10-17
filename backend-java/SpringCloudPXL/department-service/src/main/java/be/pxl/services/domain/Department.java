@@ -21,8 +21,14 @@ public class Department {
     private Long id;
     private Long organizationId;
     private String name ;
-    // Todo Check the list
-    //private List<Employee> employees;
+
+    // Todo Check this config, info from ChatGPT ! --> Check with Tom
+
+    @ElementCollection
+    @CollectionTable(name = "department_employees", joinColumns = @JoinColumn(name = "department_id"))
+    @Column(name = "employee_id")
+    private List<Long> employees;
+
     private String position;
 
 }

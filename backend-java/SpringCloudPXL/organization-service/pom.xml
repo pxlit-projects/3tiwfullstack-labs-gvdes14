@@ -7,10 +7,10 @@
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
-    <artifactId>department-service</artifactId>
+    <artifactId>organization-service</artifactId>
     <packaging>jar</packaging>
 
-    <name>department-service</name>
+    <name>organization-service</name>
     <url>http://maven.apache.org</url>
 
     <properties>
@@ -23,12 +23,6 @@
             <artifactId>junit</artifactId>
             <version>3.8.1</version>
             <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>be.pxl.services</groupId>
-            <artifactId>employee-service</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
-            <scope>compile</scope>
         </dependency>
     </dependencies>
 </project>

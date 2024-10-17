@@ -1,6 +1,7 @@
 package be.pxl.services.controller;
 
 import be.pxl.services.domain.Employee;
+import be.pxl.services.domain.dto.EmployeeRequest;
 import be.pxl.services.services.IEmployeeService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,10 +30,14 @@ public class EmployeeController {
     }
 
     @PostMapping
-    public ResponseEntity add(@RequestBody Employee employee) {
+    @ResponseStatus(HttpStatus.CREATED)
+    public void addEmployee(@RequestBody EmployeeRequest employeeRequest) {
+        employeeService.addEmployee(employeeRequest);
+    }
+    /*public ResponseEntity add(@RequestBody Employee employee) {
         employeeService.add(employee);
         return new ResponseEntity(HttpStatus.CREATED);
-    }
+    }*/
 
     @GetMapping("/{id}")
     public ResponseEntity findById(@PathVariable Long id) {
