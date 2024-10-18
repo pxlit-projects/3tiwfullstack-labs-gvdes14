@@ -1,10 +1,6 @@
 package be.pxl.services.services;
 
-import be.pxl.services.domain.dto.Organization;
-import be.pxl.services.domain.dto.OrganizationResponse;
-import org.springframework.http.ResponseEntity;
-
-import java.util.List;
+import be.pxl.services.domain.Organization;
 
 public interface IOrganizationService {
 

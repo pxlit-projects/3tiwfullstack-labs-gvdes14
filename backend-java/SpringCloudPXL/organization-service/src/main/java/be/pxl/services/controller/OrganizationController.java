@@ -1,7 +1,5 @@
 package be.pxl.services.controller;
 
-import be.pxl.services.domain.dto.Organization;
-import be.pxl.services.domain.dto.OrganizationResponse;
 import be.pxl.services.services.IOrganizationService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;

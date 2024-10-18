@@ -1,6 +1,6 @@
 package be.pxl.services.services;
 
-import be.pxl.services.domain.dto.Organization;
+import be.pxl.services.domain.Organization;
 import be.pxl.services.repository.OrganizationRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;

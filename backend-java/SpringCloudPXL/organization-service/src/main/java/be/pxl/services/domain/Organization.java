@@ -1,13 +1,10 @@
-package be.pxl.services.domain.dto;
+package be.pxl.services.domain;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.springframework.http.codec.multipart.DefaultPartHttpMessageReader;
-
-import java.util.List;
 
 @Entity
 @Table(name="organization")

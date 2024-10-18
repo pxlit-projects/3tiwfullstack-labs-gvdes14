@@ -25,6 +25,7 @@
         <module>employee-service</module>
         <module>department-service</module>
         <module>organization-service</module>
+        <module>notification-service</module>
     </modules>
     <scm>
         <connection/>
@@ -78,5 +79,18 @@
             </plugin>
         </plugins>
     </build>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.testcontainers</groupId>
+                <artifactId>testcontainers-bom</artifactId>
+                <version>1.17.3</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
 
 </project>
