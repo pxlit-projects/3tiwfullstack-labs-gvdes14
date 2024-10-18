@@ -34,10 +34,6 @@ public class EmployeeController {
     public void addEmployee(@RequestBody EmployeeRequest employeeRequest) {
         employeeService.addEmployee(employeeRequest);
     }
-    /*public ResponseEntity add(@RequestBody Employee employee) {
-        employeeService.add(employee);
-        return new ResponseEntity(HttpStatus.CREATED);
-    }*/
 
     @GetMapping("/{id}")
     public ResponseEntity findById(@PathVariable Long id) {

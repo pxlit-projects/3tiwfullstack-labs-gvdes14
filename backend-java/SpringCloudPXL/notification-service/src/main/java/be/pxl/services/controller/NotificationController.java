@@ -1,19 +1,27 @@
 package be.pxl.services.controller;
 
+import be.pxl.services.domain.Notification;
+import be.pxl.services.services.NotificationService;
+import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/api/notification")
+@RequestMapping("/notification/")
+@RequiredArgsConstructor
+@Slf4j
+
 public class NotificationController {
 
-    //TODO : Write the required api endpoints
+    private final NotificationService notificationService;
 
-    @GetMapping
-    public ResponseEntity<String> getNotification() {
-        return ResponseEntity.ok("Hello World");
+    @PostMapping
+    @ResponseStatus(HttpStatus.CREATED)
+    public void sendMessage(@RequestBody Notification notification) {
+        notificationService.sendMessage(notification);
     }
+
 
 }
