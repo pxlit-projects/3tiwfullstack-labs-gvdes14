@@ -1,5 +1,6 @@
 server:
-  port:8085
+  port: 8090
+
 spring:
   cloud:
     gateway:
@@ -23,6 +24,6 @@ spring:
             - RewritePath=/employee/(?<path>.*), /$\{path}
 
 eureka:
-client:
-serviceUrl:
-  defaultZone:http://localhost:8061/eureka/
+  client:
+    serviceUrl:
+      defaultZone:http://localhost:8061/eureka/

@@ -52,10 +52,12 @@
             <scope>runtime</scope>
         </dependency>
         -->
+        <!-- added to dubmodules because the gateway doesn't work when this is in the root pom
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
+        -->
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
