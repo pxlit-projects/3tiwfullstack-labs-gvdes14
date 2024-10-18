@@ -22,6 +22,25 @@ spring:
             - Path=/employee/**
           filters:
             - RewritePath=/employee/(?<path>.*), /$\{path}
+      -   id: notification-service
+          uri: lb://notification-service
+          predicates:
+            - Path=/notification/**
+          filters:
+            - RewritePath=/notification/(?<path>.*), /$\{path}
+      -   id: organization-service
+          uri: lb://organization-service
+          predicates:
+            - Path=/organization/**
+          filters:
+            - RewritePath=/organization/(?<path>.*), /$\{path}
+      -   id: department-service
+          uri: lb://department-service
+          predicates:
+            - Path=/department/**
+          filters:
+            - RewritePath=/department/(?<path>.*), /$\{path}
+
 
 eureka:
   client:
