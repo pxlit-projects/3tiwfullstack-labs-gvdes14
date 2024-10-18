@@ -1,0 +1,28 @@
+server:
+  port:8085
+spring:
+  cloud:
+    gateway:
+      globalcors:
+        corsConfigurations:
+          '[/**]':
+            allowedOrigins:
+              - "localhost"
+            allowedMethods:
+              - "*"
+            allowCredentials: true
+      discovery:
+        locator:
+          enabled:true
+      routes:
+      -   id: employee-service
+          uri: lb://employee-service
+          predicates:
+            - Path=/employee/**
+          filters:
+            - RewritePath=/employee/(?<path>.*), /$\{path}
+
+eureka:
+client:
+serviceUrl:
+  defaultZone:http://localhost:8061/eureka/
