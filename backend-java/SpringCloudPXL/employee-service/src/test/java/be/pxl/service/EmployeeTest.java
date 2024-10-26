@@ -45,7 +45,7 @@ public class EmployeeTest {
 
     @Container
     private static MySQLContainer sqlContainer = new MySQLContainer("mysql:5.7.37"); // Todo : VRAAG - hoe de versie wordt bepaald
-    // TODO : VRAAG - Wat is de meerwaarde van een testcontainer? Bij dev wordt er reedt een container in gebruik genomen?
+    // TODO : VRAAG - Wat is de meerwaarde van een testcontainer? Bij dev wordt er reeds een container in gebruik genomen?
 
 
     @DynamicPropertySource

@@ -6,6 +6,8 @@ import be.pxl.services.domain.dto.DepartmentResponse;
 import be.pxl.services.repository.DepartmentRepository;
 import lombok.AllArgsConstructor;
 import lombok.RequiredArgsConstructor;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -14,6 +16,8 @@ import java.util.Optional;
 @Service
 @RequiredArgsConstructor
 public class DepartmentService implements IDepartmentService {
+    private static final Logger log = LoggerFactory.getLogger(DepartmentService.class);
+
 
     private final DepartmentRepository departmentRepository ;
 

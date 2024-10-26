@@ -3,6 +3,8 @@ package be.pxl.services.services;
 import be.pxl.services.domain.Organization;
 import be.pxl.services.repository.OrganizationRepository;
 import lombok.RequiredArgsConstructor;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -10,6 +12,11 @@ import org.springframework.stereotype.Service;
 public class OrganizationService implements IOrganizationService {
 
     private final OrganizationRepository organizationRepository;
+
+    private static final Logger log = LoggerFactory.getLogger(OrganizationService.class);
+
+
+    //todo : Implement the
 
     @Override
     public Organization findById(Long id) {

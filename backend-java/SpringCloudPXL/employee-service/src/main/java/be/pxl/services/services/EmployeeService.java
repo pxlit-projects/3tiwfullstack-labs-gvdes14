@@ -1,12 +1,15 @@
 package be.pxl.services.services;
 
 import be.pxl.services.client.NotificationClient;
+import be.pxl.services.controller.EmployeeController;
 import be.pxl.services.domain.Employee;
 import be.pxl.services.domain.NotificationRequest;
 import be.pxl.services.domain.dto.EmployeeRequest;
 import be.pxl.services.domain.dto.EmployeeResponse;
 import be.pxl.services.repository.EmployeeRepository;
 import lombok.RequiredArgsConstructor;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -17,6 +20,9 @@ import java.util.Optional;
 @Service
 @RequiredArgsConstructor
 public class EmployeeService implements IEmployeeService {
+
+    private static final Logger log = LoggerFactory.getLogger(EmployeeService.class);
+
 
     private final EmployeeRepository employeeRepository;
     private final NotificationClient notificationClient;
