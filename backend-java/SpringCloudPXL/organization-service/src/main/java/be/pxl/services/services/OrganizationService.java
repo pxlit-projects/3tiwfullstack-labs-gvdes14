@@ -16,7 +16,7 @@ public class OrganizationService implements IOrganizationService {
     private static final Logger log = LoggerFactory.getLogger(OrganizationService.class);
 
 
-    //todo : Implement the
+    //todo : Implement the methods
 
     @Override
     public Organization findById(Long id) {
@@ -25,19 +25,16 @@ public class OrganizationService implements IOrganizationService {
 
     @Override
     public Organization findByIdWithDepartments(Long id) {
-        // todo : Adapt this
         return organizationRepository.findById(id).orElse(null);
     }
 
     @Override
     public Organization findByIdWithDepartmentsAndEmployees(Long id) {
-        // todo : Adapt this
         return organizationRepository.findById(id).orElse(null);
     }
 
     @Override
     public Organization findByIdWithEmployees(Long id) {
-        // todo : Adapt this
         return organizationRepository.findById(id).orElse(null);
     }
 }

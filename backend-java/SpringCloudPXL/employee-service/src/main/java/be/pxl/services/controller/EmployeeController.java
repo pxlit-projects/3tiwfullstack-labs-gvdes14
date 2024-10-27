@@ -46,7 +46,7 @@ public class EmployeeController {
         log.info("Added employee information: {}", employeeRequest);
     }
 
-    // todo : Check response when not ok
+    // todo : Check response when not ok, is this needed ?
 
     @GetMapping("/{id}")
     public ResponseEntity findById(@PathVariable Long id) {
