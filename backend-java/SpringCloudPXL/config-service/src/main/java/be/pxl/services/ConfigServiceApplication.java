@@ -22,6 +22,5 @@ public class ConfigServiceApplication
 
         // TODO : Change the config to a GIT profile. This is better for handling the config...
         // TODO : Vraag - Dan wordt enkel de config van de config server bijgehouden op git? Hoe wordt dan hiermee onderscheid gemaakt tussen de verschillende omgevingen? dev, prod,...
-        // TODO : Testing synch
     }
 }
