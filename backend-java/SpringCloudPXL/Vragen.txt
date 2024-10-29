@@ -1,0 +1,8 @@
+TODO : Vragen te stellen tijdens meeting
+1. Bij AMQP, kan je ervan uitgaan dat een async comm nodig is wanneer er een api beschikbaar moet worden gemaakt naar buiten? Dan moet de microservice op zichzelf kunnen werken.
+
+2. RabbitMQ werd toegevoegd aan de docker compose file. is dit ok?
+
+3. Waar zit de poort config van RabbitMq ?
+
+4. Mogen we een startscript (bash script) maken om de verschillende services op te starten? Bestaat er dergelijke funtionaliteit in intelliJ?

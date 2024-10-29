@@ -14,19 +14,5 @@ services:
     volumes:
       - db_data:/var/lib/mysql  # Persistentie van gegevens
 
-  rabbitmq:
-    image: rabbitmq:management
-    container_name: rabbitmq_broker
-    ports:
-      - "5672:5672"     # RabbitMQ AMQP-poort voor applicatiecommunicatie
-      - "15672:15672"   # RabbitMQ management console
-      - "15671:15671"   # Optionele SSL-poort als SSL wordt ingesteld
-    environment:
-      RABBITMQ_DEFAULT_USER: user  # Standaard RabbitMQ-gebruiker
-      RABBITMQ_DEFAULT_PASS: password  # Wachtwoord voor de gebruiker
-    volumes:
-      - rabbitmq_data:/var/lib/rabbitmq  # Persistentie van gegevens
-
 volumes:
   db_data:
-  rabbitmq_data:

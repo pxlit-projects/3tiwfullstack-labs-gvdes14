@@ -29,6 +29,7 @@
         <module>discovery-service</module>
         <module>config-service</module>
         <module>gateway-service</module>
+        <module>messaging-service</module>
     </modules>
     <scm>
         <connection/>
